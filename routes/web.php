@@ -6,6 +6,10 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Middleware\AuthMiddleware;
 
 Route::view('/', 'welcome')->name('home');
+Route::view('/home1', 'home1')->name('home1');
+Route::view('/home2', 'home2')->name('home2');
+Route::view('/home3', 'home3')->name('home3');
+Route::view('/home4', 'home4')->name('home4');
 Route::view("/Dashbord", "Dashbord")->name("Dashbord");
 Route::view("/signup", "signup")->name("signup");
 Route::view("/login", "login")->name("login");
