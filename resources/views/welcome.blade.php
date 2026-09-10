@@ -38,7 +38,7 @@
                 </div>
                 <div class="max-lg:w-1/3 flex gap-1.5 items-end justify-center">
                     <span
-                        class="text-(--primariy-color) xl:text-[30px] lg:text-[23px] text-[#ab947a] md:text-[21px] text-[13px] lg:leading-4 md:leading-4 leading-3 font-bold">آرام ذهن</span>
+                        class="text-(--primariy-color) text-[#ab947a] xl:text-[30px] lg:text-[23px] md:text-[21px] text-[13px] lg:leading-4 md:leading-4 leading-3 font-bold">آرام ذهن</span>
                     <img src="{{ asset('assets/img/logo.png') }}" alt="" class="xl:w-8 lg:w-6 sm:w-7 w-5">
                 </div>
                 <div class="max-lg:hidden lg:flex w-8/12 h-auto flex justify-center rounded-xl mx-auto">
@@ -52,7 +52,7 @@
                             </div>
                         </li>
                         <li
-                            class="hover:text-white flex text-[#ab947a] justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
+                            class="hover:text-white text-[#ab947a] flex justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
                             <span>نمونه کارها</span>
                             <div
                                 class="rounded-md group-hover:w-full w-[0px] bg-(--primariy-color) h-[2px] transition-all duration-300 flex justify-center items-center">
@@ -60,21 +60,21 @@
                             </div>
                         </li>
                         <li
-                            class="hover:text-white flex text-[#ab947a] justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
+                            class="hover:text-white text-[#ab947a] flex justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
                             <span>مشاوره</span>
                             <div
                                 class="rounded-md group-hover:w-full w-[0px] bg-(--primariy-color) h-[2px] transition-all duration-300">
                             </div>
                         </li>
                         <li
-                            class="hover:text-white flex text-[#ab947a] justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
+                            class="hover:text-white text-[#ab947a] flex justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
                             <span>گاه نوشت</span>
                             <div
                                 class="rounded-md group-hover:w-full w-[0px] bg-(--primariy-color) h-[2px] transition-all duration-300">
                             </div>
                         </li>
                         <li
-                            class="hover:text-white flex text-[#ab947a] justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
+                            class="hover:text-white text-[#ab947a] flex justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
                             <span>تماس باما</span>
                             <div
                                 class="rounded-md group-hover:w-full w-[0px] bg-(--primariy-color) h-[2px] transition-all duration-300">
@@ -82,7 +82,7 @@
 
                         </li>
                         <li
-                            class="hover:text-white flex text-[#ab947a] justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
+                            class="hover:text-white text-[#ab947a] flex justify-center flex-col items-center group cursor-pointer py-1 transition-all duration-300">
                             <span>درباره ما</span>
                             <div
                                 class="rounded-md group-hover:w-full w-[0px] bg-(--primariy-color) h-[2px] transition-all duration-300">
@@ -92,28 +92,18 @@
                 </div>
 
                 <div class="max-lg:w-1/3 flex justify-end items-center">
-                    <div class="inline-block text-[#ab947a] px-2 md:px-4 py-2 md:py-3 rounded-3xl text-xs md:text-sm font-bold cursor-pointer transition-all duration-300 border border-(--primariy-color)">
+                    <div class="inline-block text-(--primariy-color) text-[#ab947a] px-2 md:px-4 py-2 md:py-3 rounded-3xl text-xs md:text-sm font-bold cursor-pointer transition-all duration-300 border border-(--primariy-color)">
                         <span>رزرو مشاوره</span>     
                     </div>
                 </div>
                 <div class="max-lg:w-1/3 flex justify-end items-center mr-3" onclick="openLoginBox()">
-                    <div class="inline-block text-[#ab947a] px-2 md:px-4 py-2 md:py-3 rounded-3xl text-xs md:text-sm font-bold cursor-pointer transition-all duration-300 border border-(--primariy-color)">
+                    <div class="inline-block text-(--primariy-color) text-[#ab947a] px-2 md:px-4 py-2 md:py-3 rounded-3xl text-xs md:text-sm font-bold cursor-pointer transition-all duration-300 border border-(--primariy-color)">
                         <span>ورود | ثبت نام</span>     
                     </div>
                 </div>
             </div>
         </div>
-        <div class="fixed w-10/12 h-full z-1 right-1/2 translate-x-1/2">
-            <div class="relative w-full h-full">
-                <div class="fixed left-[2%] bottom-[4%] xl:w-120 xl:h-120 2xl:w-170 2xl:h-170">
-                    <img src="{{ asset('assets/img/82.webp') }}" alt="" class="w-full h-full">
-                </div>
-                <div class="fixed xl:top-[20%] rotate-7 2xl:top-[13%] right-0 xl:w-10/12 xl:h-6/12 2xl:h-8/12">
-                    <img src="{{ asset('assets/img/83.png') }}" alt="" class="w-full h-full">
-                </div>
-            </div>
-        </div>
-    <img src="{{ asset('assets/img/81.webp') }}" alt="" class="absolute top-0 w-full h-full">
+    <img src="{{ asset('assets/img/8.webp') }}" alt="" class="w-full h-full">
 </header>
 
 
