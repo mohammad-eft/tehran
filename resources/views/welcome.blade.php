@@ -25,7 +25,7 @@
 
         </div>
     </div>
-<header class="w-full h-dvh ">
+<header class="w-full h-dvh relative">
       <div class="w-full h-20 fixed top-0 flex justify-center items-center z-5">
             <div
                 class="w-11/12 h-full flex justify-between items-center sm:px-4 px-2 sm:py-5 py-1.5 rounded-xl">
