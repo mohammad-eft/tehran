@@ -1,4 +1,11 @@
 @import url('fontiran.css');
+
+:root{
+    --primary-color: #560c11;
+    --secondary-color: #e9d9c3;
+    --thirst-color: #ad936e;
+}
+
 *{
     font-family: 'IRANSansXFaNum';
 }
