@@ -103,9 +103,17 @@
                 </div>
             </div>
         </div>
-    <img src="{{ asset('assets/img/82.webp') }}" alt="" class="absolute z-1 left-50 bottom-13 w-170 h-170">
-    <img src="{{ asset('assets/img/83.png') }}" alt="" class="absolute z-2 top-40 right-35 w-8/12 h-8/12">
-    <img src="{{ asset('assets/img/81.webp') }}" alt="" class="w-full h-full">
+        <div class="fixed w-10/12 h-full z-1 right-1/2 translate-x-1/2">
+            <div class="relative w-full h-full">
+                <div class="fixed left-[2%] bottom-[4%] xl:w-120 xl:h-120 2xl:w-170 2xl:h-170">
+                    <img src="{{ asset('assets/img/82.webp') }}" alt="" class="w-full h-full">
+                </div>
+                <div class="fixed xl:top-[20%] rotate-7 2xl:top-[13%] right-0 xl:w-10/12 xl:h-6/12 2xl:h-8/12">
+                    <img src="{{ asset('assets/img/83.png') }}" alt="" class="w-full h-full">
+                </div>
+            </div>
+        </div>
+    <img src="{{ asset('assets/img/81.webp') }}" alt="" class="absolute top-0 w-full h-full">
 </header>
 
 
