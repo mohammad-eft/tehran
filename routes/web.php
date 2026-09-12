@@ -7,6 +7,7 @@ use App\Http\Middleware\AuthMiddleware;
 
 Route::view('/', 'firstPage')->name('firstPage');
 Route::view('/main', 'main')->name('home');
+Route::view('/encyclopaedia', 'encyclopaedia')->name('encyclopaedia');
 Route::view('/home01', 'welcome')->name('home01');
 Route::view('/home1', 'home1')->name('home1');
 Route::view('/home2', 'home2')->name('home2');
