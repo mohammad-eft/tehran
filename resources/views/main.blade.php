@@ -77,7 +77,7 @@
                             <p class="w-full text-sm lg:text-base leading-[2] lg:text-center text-(--primary-color) mb-3 lg:mb-5">
                                 مفاهیم، اصطلاحات و ارجاعات روانکاوی لکانی
                             </p>
-                            <a href="#" class="w-2/3 lg:hidden flex flex-row gap-3 items-center group">
+                            <a href="{{ route('encyclopaedia') }}" class="w-2/3 lg:hidden flex flex-row gap-3 items-center group">
                                 <svg class="w-[30px] h-[30px] text-(--primary-color) transition-all duration-300 group-hover:translate-x-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                                 </svg>
