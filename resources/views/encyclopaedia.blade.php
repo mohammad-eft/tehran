@@ -34,15 +34,15 @@
                         </a>
                     </div>
                 </div>
-                <div class="w-full flex justify-end items-center gap-2">
+                <div class="w-full flex justify-end items-center gap-2 mt-4 lg:mt-0">
                     <a href="#" class="text-xs text-(--primary-color)">خانه</a>
                     <span class="text-xs text-(--primary-color)">/</span>
                     <a href="#" class="text-xs text-(--primary-color)">دانشنامه</a>
                     <span class="text-xs text-(--primary-color)">/</span>
                     <a href="#" class="text-xs text-(--primary-color)">مفاهیم</a>
                 </div>
-                <div class="w-full flex flex-row justify-between mt-10">
-                    <div class="w-1/2">
+                <div class="w-full flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between mt-10">
+                    <div class="w-full lg:w-1/2">
                         <div class="w-11/12 rounded-full border border-(--primary-color)/20 relative flex justify-between py-2 px-3 items-center bg-(--secondary-color)">
                             <img src="{{ asset('assets/img/logo01.png') }}" class="w-8" alt="">
                             <input type="text" class="outline-none w-10/12 text-sm text-(--primary-color) in-fa pr-5" placeholder="چه چیزی را جست و جو می‌کنید؟" name="" id="">
@@ -51,26 +51,26 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="flex flex-col items-end gap-4">
-                        <h2 class="text-end text-5xl font-bold text-(--primary-color)">دانشنامه</h2>
+                    <div class="flex flex-col items-center lg:items-end gap-4">
+                        <h2 class="text-end text-2xl lg:text-5xl font-bold text-(--primary-color)">دانشنامه</h2>
                         <span class="text-sm text-(--primary-color)">
                             هر مفهوم، گرهی‌ست در شبکه‌ای از مفاهیم.
                         </span>
                     </div>
                 </div>
-                <div class="w-full mt-10 flex flex-row">
-                    <div class="w-1/3 px-5 border-l border-(--primary-color)/50">
+                <div class="w-full mt-10 flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-1/3 px-5 border-r lg:border-r-0 lg:border-l border-(--primary-color)/50">
                         <div>
-                            <h3 class="text-end text-(--primary-color) text-3xl font-bold">سینتوم</h3>
-                            <div class="mt-3 mb-5 text-end">
+                            <h3 class="lg:text-end text-(--primary-color) text-xl lg:text-3xl font-bold">سینتوم</h3>
+                            <div class="mt-3 mb-5 lg:text-end">
                                 <span class="text-sm text-(--primary-color) tracking-[2px] pb-2 border-b border-(--primary-color)/30">Sinthome</span>
                             </div>
-                            <p class="text-sm text-(--primary-color) text-end leading-[2]">
+                            <p class="text-sm text-(--primary-color) lg:text-end leading-[2]">
                                 سینتوم به عنوان راهی برای مواجهه با لذت، ناممکن را در بافت نمادین جذب می‌کند و به آن شکل قابل تحمل می‌بخشد.
                             </p>
                         </div>
                         <div class="mt-10">
-                            <div class="w-full flex flex-row items-center justify-end gap-3">
+                            <div class="w-full flex flex-row-reverse lg:flex-row items-center justify-end gap-3">
                                 <span class="text-(--primary-color) text-sm">پیوند ها</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-(--primary-color) -rotate-45" viewBox="0 0 576 512">
                                     <path d="M0 256C0 167.6 71.6 96 160 96h72c13.3 0 24 10.7 24 24s-10.7 24-24 24H160C98.1 144 48 194.1 48 256s50.1 112 112 112h72c13.3 0 24 10.7 24 24s-10.7 24-24 24H160C71.6 416 0 344.4 0 256zm576 0c0 88.4-71.6 160-160 160H344c-13.3 0-24-10.7-24-24s10.7-24 24-24h72c61.9 0 112-50.1 112-112s-50.1-112-112-112H344c-13.3 0-24-10.7-24-24s10.7-24 24-24h72c88.4 0 160 71.6 160 160zM184 232H392c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/>
@@ -78,31 +78,31 @@
                             </div>
                             <ul class="flex flex-col gap-3 mt-5">
                                 <li>
-                                    <a href="#" class="w-full flex flex-row justify-end items-center gap-3">
+                                    <a href="#" class="w-full flex flex-row-reverse lg:flex-row justify-end items-center gap-3">
                                         <span class="text-sm text-(--primary-color)">ژونیسانس</span>
                                         <span class="block size-2 rounded-full border border-(--primary-color)/40"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="w-full flex flex-row justify-end items-center gap-3">
+                                    <a href="#" class="w-full flex flex-row-reverse lg:flex-row justify-end items-center gap-3">
                                         <span class="text-sm text-(--primary-color)">جویس</span>
                                         <span class="block size-2 rounded-full border border-(--primary-color)/40"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="w-full flex flex-row justify-end items-center gap-3">
+                                    <a href="#" class="w-full flex flex-row-reverse lg:flex-row justify-end items-center gap-3">
                                         <span class="text-sm text-(--primary-color)">گروه برومه‌ای</span>
                                         <span class="block size-2 rounded-full border border-(--primary-color)/40"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="w-full flex flex-row justify-end items-center gap-3">
+                                    <a href="#" class="w-full flex flex-row-reverse lg:flex-row justify-end items-center gap-3">
                                         <span class="text-sm text-(--primary-color)">امر واقع</span>
                                         <span class="block size-2 rounded-full border border-(--primary-color)/40"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="w-full flex flex-row justify-end items-center gap-3">
+                                    <a href="#" class="w-full flex flex-row-reverse lg:flex-row justify-end items-center gap-3">
                                         <span class="text-sm text-(--primary-color)">سمینار XXlll</span>
                                         <span class="block size-2 rounded-full border border-(--primary-color)/40"></span>
                                     </a>
@@ -110,7 +110,7 @@
                             </ul>
                         </div>
                         <div class="mt-10">
-                            <div class="flex flex-row justify-end items-center gap-4">
+                            <div class="flex flex-row-reverse lg:flex-row justify-end items-center gap-4">
                                 <span class="text-(--primary-color) text-sm">رد این مفهوم</span>
                                 <div class="size-6 relative">
                                     <div class="block w-full absolute h-px bg-(--primary-color) right-0 top-1/2 -translate-y-1/2">
@@ -126,30 +126,30 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full flex flex-row-reverse">
-                                <div class="w-10/12 flex flex-row-reverse gap-1.5 flex-wrap items-center mt-4">
+                            <div class="w-full flex lg:flex-row-reverse">
+                                <div class="w-full lg:w-10/12 flex justify-end lg:justify-start flex-row-reverse gap-1.5 flex-wrap items-center mt-4">
                                     <span class="text-sm text-(--primary-color)">سمینار XXlll</span>
-                                    <svg class="w-[18px] h-[18px] text-(--primary-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <svg class="w-[18px] h-[18px] text-(--primary-color) rotate-y-180 lg:rotate-y-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                                     </svg>
                                     <span class="text-sm text-(--primary-color)">لاکان</span>
-                                    <svg class="w-[18px] h-[18px] text-(--primary-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <svg class="w-[18px] h-[18px] text-(--primary-color) rotate-y-180 lg:rotate-y-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                                     </svg>
                                     <span class="text-sm text-(--primary-color)">فروید</span>
-                                    <svg class="w-[18px] h-[18px] text-(--primary-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <svg class="w-[18px] h-[18px] text-(--primary-color) rotate-y-180 lg:rotate-y-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                                     </svg>
                                     <span class="text-sm text-(--primary-color)">سینتوم</span>
-                                    <svg class="w-[18px] h-[18px] text-(--primary-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <svg class="w-[18px] h-[18px] text-(--primary-color) rotate-y-180 lg:rotate-y-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                                     </svg>
                                     <span class="text-sm text-(--primary-color)">جویس</span>
                                 </div>
                             </div>
-                            <div class="mt-10">
-                                <a href="#" class="flex flex-row-reverse items-center gap-3">
-                                    <svg class="w-[21px] h-[21px] text-(--primary-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <div class="mt-5 lg:mt-10">
+                                <a href="#" class="flex lg:flex-row-reverse items-center gap-3">
+                                    <svg class="w-[21px] h-[21px] text-(--primary-color) rotate-y-180 lg:rotate-y-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                                     </svg>
                                     <span class="text-sm text-(--primary-color)">مشاهده همه پیوند ها</span>
@@ -157,7 +157,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-2/3">
+                    <div class="w-full lg:w-2/3 mt-10 lg:mt-0">
                         <div class="w-full pr-8">
                             <ul class="w-full flex flex-row-reverse items-center border-b border-(--primary-color)/30">
                                 <li class="pb-2 relative after:absolute after:content-[''] after:w-px after:h-1/2 after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-(--primary-color)/40">
@@ -184,22 +184,22 @@
                         </div>
                         <div class="pr-8 mt-5 relative">
                             <img src="{{ asset('assets/img/encyclopaedia-page.png') }}" class="w-full" alt="">
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[6%] right-[48%]">ژونیسانس</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[18%] right-[22%]">دال</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[43%] right-[9%]">نام پدر</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[68%] right-[16%]">میل</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[89%] right-[28%]">فانتزی</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[90%] right-[56%]">ایژه a</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[79%] right-[81%]">دیگری</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[49%] right-[87%]">امر نمادین</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) font-bold top-[17%] right-[78%]">امر واقع</a>
-                            <a href="#" class="absolute text-sm text-(--secondary-color) font-bold top-[39%] right-[79%]">لاکان</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[6%] right-[49%] lg:right-[48%]">ژونیسانس</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[18%] right-[25%] lg:right-[22%]">دال</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[43%] right-[12%] lg:right-[9%]">نام پدر</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[68%] right-[19%] lg:right-[16%]">میل</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[89%] right-[31%] lg:right-[28%]">فانتزی</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[90%] right-[58%] lg:right-[56%]">ایژه a</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[79%] right-[81%]">دیگری</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[49%] right-[87%]">امر نمادین</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[17%] right-[78%]">امر واقع</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--secondary-color) font-bold top-[39%] right-[79%]">لاکان</a>
                             
                             
-                            <a href="#" class="absolute text-sm text-(--primary-color)/70 top-[15%] right-[32%]">جویس</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) top-[15%] right-[63%]">سمینار Xlll</a>
-                            <a href="#" class="absolute text-sm text-(--primary-color) top-[75%] bg-(--secondary-color) right-[60%]">گره برومه‌ای</a>
-                            <a href="#" class="absolute text-(--primary-color) top-[65%] bg-(--secondary-color) font-bold right-[48%] rounded-full text-lg">سینتوم</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color)/70 top-[15%] right-[35%] lg:right-[32%]">جویس</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) top-[15%] right-[63%]">سمینار Xlll</a>
+                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) top-[75%] bg-(--secondary-color) right-[60%]">گره برومه‌ای</a>
+                            <a href="#" class="absolute text-(--primary-color) top-[65%] bg-(--secondary-color) font-bold right-[45%] lg:right-[48%] rounded-full text-lg">سینتوم</a>
                         </div>
                     </div>
                 </div>
