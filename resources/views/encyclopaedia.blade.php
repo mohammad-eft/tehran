@@ -78,7 +78,7 @@
                             </div>
                             <ul class="flex flex-col gap-3 mt-5">
                                 <li>
-                                    <a href="#" class="w-full flex flex-row-reverse lg:flex-row justify-end items-center gap-3">
+                                    <a href="{{ route('jouissance') }}" class="w-full flex flex-row-reverse lg:flex-row justify-end items-center gap-3">
                                         <span class="text-sm text-(--primary-color)">ژونیسانس</span>
                                         <span class="block size-2 rounded-full border border-(--primary-color)/40"></span>
                                     </a>
@@ -184,7 +184,7 @@
                         </div>
                         <div class="pr-8 mt-5 relative">
                             <img src="{{ asset('assets/img/encyclopaedia-page.png') }}" class="w-full" alt="">
-                            <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[6%] right-[49%] lg:right-[48%]">ژونیسانس</a>
+                            <a href="{{ route('jouissance') }}" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[6%] right-[49%] lg:right-[48%]">ژونیسانس</a>
                             <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[18%] right-[25%] lg:right-[22%]">دال</a>
                             <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[43%] right-[12%] lg:right-[9%]">نام پدر</a>
                             <a href="#" class="absolute text-[9px] lg:text-sm text-(--primary-color) font-bold top-[68%] right-[19%] lg:right-[16%]">میل</a>
