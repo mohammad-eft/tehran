@@ -39,7 +39,7 @@
                 <div class="max-lg:w-1/3 flex gap-1.5 items-end justify-center">
                     <span
                         class="text-(--primariy-color) text-[#ab947a] xl:text-[30px] lg:text-[23px] md:text-[21px] text-[13px] lg:leading-4 md:leading-4 leading-3 font-bold">آرام ذهن</span>
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="xl:w-8 lg:w-6 sm:w-7 w-5">
+                    <img src="{{ asset('assets/img/logo.webp') }}" alt="" class="xl:w-8 lg:w-6 sm:w-7 w-5">
                 </div>
                 <div class="max-lg:hidden lg:flex w-8/12 h-auto flex justify-center rounded-xl mx-auto">
                     <ul

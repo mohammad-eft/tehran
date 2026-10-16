@@ -11,9 +11,9 @@
 </head>
 <body>
     <div class="w-full h-dvh relative">
-        <img src="{{ asset('assets/img/first-page-bg.png') }}" class="w-full h-full object-cover" alt="">
+        <img src="{{ asset('assets/img/first-page-bg.webp') }}" class="w-full h-full object-cover" alt="">
         <div class="absolute w-full h-full top-0 right-0 flex flex-col gap-3 lg:gap-5 justify-center items-center">
-            <img src="{{ asset('assets/img/first-page-element.png') }}" class="w-1/2 lg:w-1/5" alt="">
+            <img src="{{ asset('assets/img/first-page-element.webp') }}" class="w-1/2 lg:w-1/5" alt="">
             <a href="{{ route('home') }}" class="text-xl font-bold text-(--primary-text-color)">ورود</a>
         </div>
     </div>
