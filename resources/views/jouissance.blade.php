@@ -12,7 +12,7 @@
 <body>
    <div class="2xl:container mx-auto w-full flex flex-row">
         <div class="w-full lg:w-3/4 h-full relative pb-14">
-            <img src="{{ asset('assets/img/main-bg.png') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
+            <img src="{{ asset('assets/img/main-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
             <div class="relative py-5 lg:px-8 px-4">
                 <div class="w-full lg:block flex justify-between items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 fill-(--primary-color) lg:hidden" id="hamburgerMenu" viewBox="0 0 448 512">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="w-full flex flex-col-reverse lg:flex-row-reverse items-center gap-8 border-b border-(--primary-color)/50 pb-5 lg:pb-10 mt-5 lg:mt-0">
                     <div class="w-full lg:w-1/2">
-                        <img src="{{ asset('assets/img/man.png') }}" class="w-full" alt="">
+                        <img src="{{ asset('assets/img/man.webp') }}" class="w-full" alt="">
                     </div>
                     <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-4 lg:gap-8">
                         <h2 class="text-xl lg:text-3xl font-bold text-(--primary-color)">تعریف</h2>
@@ -65,7 +65,7 @@
                         پیوند ها
                     </h2>
                     <div class="w-full relative">
-                        <img src="{{ asset('assets/img/links.png') }}" class="w-full lg:w-3/4 mx-auto" alt="">
+                        <img src="{{ asset('assets/img/links.webp') }}" class="w-full lg:w-3/4 mx-auto" alt="">
                         <a href="#" class="absolute text-(--secondary-color) top-[39%] right-[40%] lg:top-[40%] lg:right-[44%] font-bold text-sm lg:text-xl p-3 lg:p-5">ژوئیسانس</a>
                         <a href="#" class="absolute text-(--primary-color) top-[6%] right-[18%] lg:top-[7%] lg:right-[27%] text-sm lg:text-xl p-3 lg:p-5">امر واقع</a>
                         <a href="#" class="absolute text-(--primary-color) top-[40%] right-[1%] lg:top-[41%] lg:right-[14%] text-sm lg:text-xl p-3 lg:p-5">نام پدر</a>
@@ -78,10 +78,10 @@
             </div>
         </div>
         <div class="hidden lg:block lg:w-1/4 h-full relative py-10 px-3 lg:py-20 lg:px-8 lg:pb-[458px] 2xl:pb-[575px]">
-            <img src="{{ asset('assets/img/side-bg.png') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
+            <img src="{{ asset('assets/img/side-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
             <div class="relative">
                 <a href="#" class="w-full flex flex-row justify-center lg:justify-between items-center gap-2">
-                    <img src="{{ asset('assets/img/logo-light.png') }}" class="w-10 lg:w-20" alt="">
+                    <img src="{{ asset('assets/img/logo-light.webp') }}" class="w-10 lg:w-20" alt="">
                     <h3 class="lg:flex justify-end items-center hidden">
                         <span class="text-(--thirst-color) tracking-[4px] font-light text-3xl">me</span>
                         <span class="text-(--secondary-color) tracking-[4px] font-light text-3xl">sinthtom</span>
@@ -96,15 +96,15 @@
                 <div class="w-full flex flex-col gap-2">
                     <a href="#" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs">
                         <span class="text-sm lg:text-xl text-(--secondary-color)">نوشتار‌ها</span>
-                        <img src="{{ asset('assets/img/side-writing.png') }}" class="hidden lg:block w-1/3" alt="">
+                        <img src="{{ asset('assets/img/side-writing.webp') }}" class="hidden lg:block w-1/3" alt="">
                     </a>
                     <a href="#" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs bg-white/10">
                         <span class="text-sm lg:text-xl text-(--secondary-color)">دانشنامه</span>
-                        <img src="{{ asset('assets/img/side-encyclopaedia.png') }}" class="hidden lg:block w-1/3" alt="">
+                        <img src="{{ asset('assets/img/side-encyclopaedia.webp') }}" class="hidden lg:block w-1/3" alt="">
                     </a>
                     <a href="#" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs">
                         <span class="text-sm lg:text-xl text-(--secondary-color)">کلینیک</span>
-                        <img src="{{ asset('assets/img/side-clinic.png') }}" class="hidden lg:block w-1/3" alt="">
+                        <img src="{{ asset('assets/img/side-clinic.webp') }}" class="hidden lg:block w-1/3" alt="">
                     </a>
                 </div>
                  <div class="mt-20 w-full lg:w-2/3 mx-auto">
@@ -125,10 +125,10 @@
 
         <div class="w-full h-dvh fixed top-0 right-0 bg-black/50 lg:hidden transition-all duration-300 invisible opacity-0" id="sideMenu">
             <div class="w-2/3 h-full relative py-10 px-3 transition-all duration-300 translate-x-full">
-                <img src="{{ asset('assets/img/side-bg.png') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
+                <img src="{{ asset('assets/img/side-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
                 <div class="relative">
                     <a href="#" class="w-full flex flex-row justify-center items-center gap-5">
-                        <img src="{{ asset('assets/img/logo-light.png') }}" class="w-10 lg:w-20" alt="">
+                        <img src="{{ asset('assets/img/logo-light.webp') }}" class="w-10 lg:w-20" alt="">
                         <h3 class="flex justify-end items-center">
                             <span class="text-(--thirst-color) tracking-[4px] font-light text-xl">me</span>
                             <span class="text-(--secondary-color) tracking-[4px] font-light text-xl">sinthtom</span>
@@ -142,15 +142,15 @@
                     <div class="my-8 w-full h-px bg-(--secondary-color)/20"></div>
                     <div class="w-full flex flex-col gap-2">
                         <a href="#" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs">
-                            <img src="{{ asset('assets/img/side-writing.png') }}" class="w-1/3" alt="">
+                            <img src="{{ asset('assets/img/side-writing.webp') }}" class="w-1/3" alt="">
                             <span class="text-sm lg:text-xl text-(--secondary-color)">نوشتار‌ها</span>
                         </a>
                         <a href="#" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs bg-white/10">
-                            <img src="{{ asset('assets/img/side-encyclopaedia.png') }}" class="w-1/3" alt="">
+                            <img src="{{ asset('assets/img/side-encyclopaedia.webp') }}" class="w-1/3" alt="">
                             <span class="text-sm lg:text-xl text-(--secondary-color)">دانشنامه</span>
                         </a>
                         <a href="#" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs">
-                            <img src="{{ asset('assets/img/side-clinic.png') }}" class="w-1/3" alt="">
+                            <img src="{{ asset('assets/img/side-clinic.webp') }}" class="w-1/3" alt="">
                             <span class="text-sm lg:text-xl text-(--secondary-color)">کلینیک</span>
                         </a>
                     </div>
