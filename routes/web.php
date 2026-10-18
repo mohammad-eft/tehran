@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\MessageController;
 use App\Http\Middleware\AuthMiddleware;
 
 Route::view('/', 'firstPage')->name('firstPage');
@@ -21,7 +22,7 @@ Route::post('/loginWithActivationCode', [UserController::class, 'loginWithActiva
 Route::post('/check-activation-code', [UserController::class, 'checkActivationCode'])->name('checkActivationCode');
 Route::post('/send_code', [UserController::class, 'send_code'])->name('send_code');
 Route::post('/removeActivationCode', [UserController::class, 'removeActivationCode'])->name('removeActivationCode');
-
+Route::view('clinic' , 'clinic')->name('clinic');
 Route::group([
     'prefix'=>'article',
     'controller'=>ArticleController::class,
@@ -40,7 +41,7 @@ Route::group([
 Route::group([
     "prefix" => "User",
     "controller" => UserController::class,
-    "as" => "user.",
+    "as" => "User.",
 ], function () {
     // SignUp
     Route::post("/createSignUp", "createSignup")->name("createSignup");
@@ -53,4 +54,12 @@ Route::group([
 
     Route::post('/check', 'check')->name('check');
     Route::post('/checkFromMenu', 'checkFromMenu')->name('checkFromMenu');
+});
+Route::group([
+    "prefix"=>"message",
+    "controller"=>MessageController::class,
+    "as"=>"message."
+] , function(){
+    Route::get('insert' , 'insert')->name('insert');
+    Route::get('store' , 'store')->name('store');
 });
