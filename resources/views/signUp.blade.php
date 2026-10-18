@@ -1,48 +1,29 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="{{ asset('assets/js/tailwind.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.js') }}"></script>
-</head>
-
-<body class="bg-gray-500">
-    <form action="{{ route('User.createSignup') }}" method="POST" id="signupForm"
-        class="w-3/10 mx-auto flex flex-col gap-5 border-green-400 border-2 rounded-3xl p-6 my-10">
+@extends('newDashbord')
+@section('title', 'ورود')
+@section('content')
+<div class="w-full h-dvh flex justify-center items-center">
+    <img class="absolute -z-1 top-0 w-full h-full" src="{{ asset('assets/img/main-bg.webp') }}" alt="">
+    <form action="{{ route('User.createSignup') }}" method="POST" id="signupForm"class="lg:w-4/10 sm:w-6/12 w-9/10  mx-auto flex flex-col gap-3 p-5 items-center rounded-2xl">
         @csrf
-        @if(session('message'))
+        <img src="{{ asset('assets/img/logo-light.webp') }}" class="w-20 lg:w-30" alt="">        @if(session('message'))
             <script>
                 link = "{{ url('/') }}/";
                 alert(@json(session('message')));
                 location.assign(link + 'login')
             </script>
         @endif
-        <h1 class="text-white text-xl">signUp</h1>
-        <input class="border-red-400 border-2 p-2 rounded-full" name="phoneNumber" type="text" placeholder="phoneNumber"
-            id="phoneNumber" value="{{ old("phoneNumber") }}">
+        <h1 class="text-xl">ثبت نام</h1>
+        <input class="text-end p-2 w-full border-b-1 border-brown-400" name="phoneNumber" type="text" placeholder="شماره تلفن"id="phoneNumber" value="{{ old('phoneNumber') }}">
         <div id="phoneNumberSection"></div>
-        <!-- @error("phoneNumber")
-            <div class="text-red-500">{{ $message }}</div>
-        @enderror -->
-        <input class="border-red-400 border-2 p-2 rounded-full" name="password" type="text" placeholder="password"
-            id="password" value="{{ old("password") }}">
+        <input class="text-end p-2 w-full border-b-1 border-brown-400" name="password" type="text" placeholder="رمز عبور" id="password" value="{{ old('password') }}">
         <div id="passwordSection"></div>
-
         <div class="w-full flex gap-2 justify-between">
-            <input class="w-8/10 border-red-400 border-2 p-2 rounded-full" name="code" type="text" placeholder="code"
-                id="code">
-            <button type="button" onclick="sendCode(this)"
-                class="bg-[orange] w-2/10 text-center text-white flex items-center rounded-lg justify-center">ارسال
-                کد</button>
+            <button type="button" onclick="sendCode(this)" class="bg-[#443514] w-3/10 text-center text-white flex items-center rounded-lg justify-center px-2">ارسال کد</button>
+            <input class="w-6/10 p-2 text-end border-b-1 border-brown-400" name="code" type="text" placeholder="کد" id="code">
         </div>
-        <!-- @error("password")
-            <div class="text-red-400">{{ $message }}</div>
-        @enderror -->
-        <button class="border-blue-400 border-2 p-2" onclick="signUp(event)">send</button>
+        <button class="w-full bg-[#836a37] p-2 hover:bg-[#9e7b34] transition-all duration-300" onclick="signUp(event)">ثبت نام</button>
     </form>
+</div>
 
     <script>
         let phoneNumber = document.getElementById("phoneNumber");
@@ -134,6 +115,4 @@
         // }
 
     </script>
-</body>
-
-</html>
+@endsection

@@ -1,44 +1,30 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="{{ asset('assets/js/tailwind.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.js') }}"></script>
-</head>
-
-<body class="bg-gray-500">
-    <form action="{{ route('User.LoginUser') }}" method="POST" id="logInForm"
-        class="w-3/10 mx-auto flex flex-col gap-5 border-green-400 border-2 rounded-3xl p-6 my-10">
+@extends('newDashbord')
+@section('title', 'ورود')
+@section('content')
+<div class="w-full h-dvh flex justify-center items-center">
+    <img class="absolute -z-1 top-0 w-full h-full" src="{{ asset('assets/img/main-bg.webp') }}" alt="">
+    <form action="{{ route('User.LoginUser') }}" method="POST" id="logInForm" class="lg:w-4/10 sm:w-6/12 w-9/10  mx-auto flex flex-col gap-3 p-5 items-center rounded-2xl">
         @csrf
-        <h1 class="text-white text-xl">login</h1>
-        <input class="border-red-400 border-2 p-2 rounded-full" name="phoneNumber" type="text" placeholder="phoneNumber"
-            id="phoneNumber">
+        <h1 class=" text-xl text-center">ورود</h1>
+        <input class="text-end p-2 w-full border-b-1 border-brown-400" name="phoneNumber" type="text" placeholder="شماره تلفن" id="phoneNumber">
         <div id="phoneNumberSection"></div>
-
-        <input class="border-red-400 border-2 p-2 rounded-full hidden" name="password" type="text"
-            placeholder="password" id="password">
+        <input class="p-2 text-end w-full hidden border-b-1 border-brown-400" name="password" type="text" placeholder="رمز عبور" id="password">
         <div id="passwordSection"></div>
-
+    
         <div class="w-full flex gap-2 justify-between" id="codeBox">
-            <input class="w-8/10 border-red-400 border-2 p-2 rounded-full" name="code" type="text" placeholder="code"
-                id="code">
             <button type="button" onclick="sendCode(this)"
-                class="bg-[orange] w-2/10 text-center text-white flex items-center rounded-lg justify-center">ارسال
-                کد</button>
+            class="bg-[#443514] w-3/10 text-center text-white flex items-center rounded-lg justify-center px-2">ارسال کد</button>
+            <input class="w-6/10 p-2 text-end border-b-1 border-brown-400" name="code" type="text" placeholder="کد" id="code">
         </div>
-
+    
         <div class="flex gap-5 justify-between">
-            <div class="cursor-pointer hover:text-blue-500" onclick="loginWithPass(this)">ورود با پسورد</div>
-            <div><a href="" class="hover:text-blue-500">فراموش کردن رمز عبور</a></div>
+            <div class="cursor-pointer hover:text-[#836a37]" onclick="loginWithPass(this)">ورود با پسورد</div>
+            <div><a href="" class="hover:text-[#836a37]">فراموش کردن رمز عبور</a></div>
         </div>
-
-        <button type="button" class="border-blue-400 border-2 p-2" onclick="loginCode(event)"
-            id="submitBtn">send</button>
-    </form>
-
+        
+        <button type="button" class="w-full bg-[#836a37] p-2 hover:bg-[#9e7b34] transition-all duration-300" onclick="loginCode(event)" id="submitBtn">ورود</button>
+    </form>    
+</div>
     <script>
         let link = "{{ url('/') }}/";
         let phoneNumber = document.getElementById("phoneNumber");
@@ -46,10 +32,10 @@
         let codeBox = document.getElementById("codeBox");
         let code = document.getElementById("code");
         let logInForm = document.getElementById("logInForm");
-
+        
         let submitBtn = document.getElementById("submitBtn");
-
-
+        
+        
         function loginWithPass(el) {
             submitBtn.setAttribute("onclick", "loginPass(event)");
             el.setAttribute("onclick", "loginWithCode(this)");
@@ -178,6 +164,4 @@
 
     </script>
 
-</body>
-
-</html>
+@endsection
