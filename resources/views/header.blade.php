@@ -1,5 +1,5 @@
         <div class="w-full flex justify-between items-center">
-        @if(!Auth::check())
+            @if(!Auth::check())
                     <a href="{{route('login')}}" class=" bg-(--primary-color) flex p-3  rounded-3xl items-center justify-between lg:gap-3 group cursor-pointer">
                         <span class="text-white text-nowrap text-xs  transtion-all duration-300">ورود / ثبت نام </span>
                     </a>
@@ -28,7 +28,7 @@
                             </svg>
                         </div>
 
-                        <div id="dropdownMenu" class="hidden absolute mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50 
+                        <div id="dropdownMenu" class="hidden absolute mt-2 w-56 bg-[#E4CAA9] rounded-lg shadow-lg border border-gray-200 py-1 z-50 
                                         left-0 right-auto 
                                         sm:left-auto sm:right-0">
 
@@ -71,11 +71,11 @@
                     
                     <!-- </div> -->
                 @endif
-            <div class="w-full flex justify-between items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 fill-(--primary-color) lg:hidden" id="hamburgerMenu" viewBox="0 0 448 512">
+            <div class="w-full flex justify-end items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 fill-(--primary-color) lg:hidden cursor-pointer" id="hamburgerMenu" viewBox="0 0 448 512">
                     <path d="M0 88C0 74.7 10.7 64 24 64H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 112 0 101.3 0 88zM0 248c0-13.3 10.7-24 24-24H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zM448 408c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24H424c13.3 0 24 10.7 24 24z"/>
                 </svg>
-                <div class="flex w-full justify-end gap-5 items-center">
+                <div class="lg:flex w-full justify-end gap-5 items-center hidden">
                     <div class="size-10 rounded-full bg-(--primary-color) flex justify-center items-center">
                         <a href="#" class="text-(--secondary-color)">س</a>
                     </div>

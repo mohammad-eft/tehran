@@ -22,6 +22,9 @@
             <input class="w-6/10 p-2 text-end border-b-1 border-brown-400" name="code" type="text" placeholder="کد" id="code">
         </div>
         <button class="w-full bg-[#836a37] p-2 hover:bg-[#9e7b34] transition-all duration-300" onclick="signUp(event)">ثبت نام</button>
+        <div class="w-full flex justify-center items-center">
+            <a href="{{route('login')}}">ورود</a>
+        </div>
     </form>
 </div>
 

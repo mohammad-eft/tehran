@@ -2,6 +2,7 @@
 @section('title', 'ورود')
 @section('content')
 <div class="w-full h-dvh flex justify-center items-center">
+    <div class="absolute w-50 rounded-xl text-center bg-red-500 top-2 transition-all duration-500" id="message"></div>
     <img class="absolute -z-1 top-0 w-full h-full" src="{{ asset('assets/img/main-bg.webp') }}" alt="">
     <form action="{{ route('User.LoginUser') }}" method="POST" id="logInForm" class="lg:w-4/10 sm:w-6/12 w-9/10  mx-auto flex flex-col gap-3 p-5 items-center rounded-2xl">
         @csrf
@@ -23,6 +24,9 @@
         </div>
         
         <button type="button" class="w-full bg-[#836a37] p-2 hover:bg-[#9e7b34] transition-all duration-300" onclick="loginCode(event)" id="submitBtn">ورود</button>
+        <div class="w-full flex justify-center items-center">
+            <a href="{{route('signup')}}">ثبت نام؟</a>
+        </div>
     </form>    
 </div>
     <script>
@@ -32,7 +36,7 @@
         let codeBox = document.getElementById("codeBox");
         let code = document.getElementById("code");
         let logInForm = document.getElementById("logInForm");
-        
+        let message=document.getElementById('message');
         let submitBtn = document.getElementById("submitBtn");
         
         
@@ -91,7 +95,10 @@
                     success: function (persent) {
                         console.log(persent)
                         if (!persent.type) {
-                            alert(message.alert);
+                            message.classList.remove('top-2')
+                            message.classList.add('top-10')
+                            message.classList.add('py-3')
+                            message.innerText='این کاربر ثبت نام نکرده'
                         }
                         if (persent.type) {
                             logInForm.submit();
