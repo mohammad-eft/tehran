@@ -4,7 +4,7 @@
     <div class="2xl:container mx-auto w-full flex flex-row">
         <div class="w-full h-full relative pb-20">
             <img src="{{ asset('assets/img/main-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
-            <div class="relative">
+            <div class="relative mt-10">
                 <div class="w-full flex flex-col justify-center items-center mt-3 gap-3">
                     <img src="{{ asset('assets/img/main-element.webp') }}" class="max-w-20 lg:max-w-40" alt="">
                     <div class="flex jstify-center items-center gap-3 lg:gap-6 relative">

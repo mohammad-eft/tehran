@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="w-full flex ">
+    <div class="w-full flex">
         <div class="hidden lg:block lg:w-1/4 py-5 px-3 lg:px-8 sticky top-0 left-0">
             <img src="{{ asset('assets/img/side-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
             <div class="relative">
@@ -60,8 +60,8 @@
                 </div>
             </div>
         </div>
-        <div class="lg:w-3/4 w-full relative">
-            <div class="absolute top-0 w-full flex justify-start p-5 z-5">
+        <div class="lg:w-3/4 w-full h-full relative">
+            <div class="absolute top-0 w-full flex justify-start p-5 z-3">
                 @include('header')
             </div>
         @yield('content')
