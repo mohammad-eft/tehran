@@ -17,7 +17,7 @@ Route::view('/home3', 'home3')->name('home3');
 Route::view('/home4', 'home4')->name('home4');
 Route::view("/Dashbord", "Dashbord")->name("Dashbord");
 Route::view("/signup", "signup")->name("signup");
-Route::view("/login", "login")->name("login");
+Route::view("/login/{message?}", "login")->name("login");
 Route::post('/loginWithActivationCode', [UserController::class, 'loginWithActivationCode'])->name('loginWithActivationCode');
 Route::post('/check-activation-code', [UserController::class, 'checkActivationCode'])->name('checkActivationCode');
 Route::post('/send_code', [UserController::class, 'send_code'])->name('send_code');
