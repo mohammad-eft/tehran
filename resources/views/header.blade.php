@@ -98,43 +98,46 @@
 
 
 
-                <div class="fixed top-0 w-full h-dvh bg-black/70 cursor-pointer invisible opacity-0 lg:hidden z-4 right-0" onclick="mobilemenu('clos')" id="menu"></div>
-                
-                    <div class="w-6/12 absolute z-5 top-0 h-dvh bg-(--primary-color) -translate-x-full left-0 transition-all duration-300 lg:hidden" id="bar">
-                        <a href="#" class="w-full flex flex-row justify-center lg:justify-between items-center gap-2">
-                            <img src="{{ asset('assets/img/logo-light.webp') }}" class="w-10 lg:w-20" alt="">
-                            <h3 class="lg:flex justify-end items-center hidden">
-                                <span class="text-(--thirst-color) tracking-[4px] font-light text-3xl">me</span>
-                                <span class="text-(--secondary-color) tracking-[4px] font-light text-3xl">sinthtom</span>
-                            </h3>
-                        </a>
-                        <div class="w-full hidden lg:flex justify-center items-center gap-3 lg:pr-10">
-                            <span class="lg:text-lg text-(--secondary-color)">روانکاوی</span>
-                            <span class="lg:text-lg text-(--secondary-color)">|</span> 
-                            <span class="lg:text-lg text-(--secondary-color)">نشان گره</span>
-                        </div>
-                        <div class="my-8 w-full h-px bg-(--secondary-color)/20"></div>
-                        <div class="w-full flex flex-col gap-2">
-                            <a href="{{route('home')}}" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('home')) bg-white/10 @endif">
-                                <span class="text-sm lg:text-xl text-(--secondary-color)">نوشتار‌ها</span>
-                                <img src="{{ asset('assets/img/side-writing.webp') }}" class="hidden lg:block w-1/3" alt="">
-                            </a>
-                            <a href="{{ route('encyclopaedia') }}" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('encyclopaedia')) bg-white/10 @endif">
-                                <span class="text-sm lg:text-xl text-(--secondary-color)">دانشنامه</span>
-                                <img src="{{ asset('assets/img/side-encyclopaedia.webp') }}" class="hidden lg:block w-1/3" alt="">
-                            </a>
-                            <a href="{{route('clinic')}}" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('clinic')) bg-white/10 @endif">
-                                <span class="text-sm lg:text-xl text-(--secondary-color)">کلینیک</span>
-                                <img src="{{ asset('assets/img/side-clinic.webp') }}" class="hidden lg:block w-1/3" alt="">
-                            </a>
-                            <a href="{{route('message.insert')}}" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('message.insert')) bg-white/10 @endif">
-                                <span class="text-sm lg:text-xl text-(--secondary-color)">داشبورد</span>
-                                <img src="{{ asset('assets/img/side-clinic.webp') }}" class="hidden lg:block w-1/3" alt="">
-                            </a>
-                        </div>
+        <div class="w-full h-dvh fixed top-0 right-0 bg-black/50 lg:hidden transition-all duration-300 invisible opacity-0" id="sideMenu">
+            <div class="w-2/3 h-full relative py-10 px-3 transition-all duration-300 translate-x-full">
+                <img src="{{ asset('assets/img/side-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
+                <div class="relative">
+                    <a href="#" class="w-full flex flex-row justify-center items-center gap-5">
+                        <img src="{{ asset('assets/img/logo-light.webp') }}" class="w-10 lg:w-20" alt="">
+                        <h3 class="flex justify-end items-center">
+                            <span class="text-(--thirst-color) tracking-[4px] font-light text-xl">me</span>
+                            <span class="text-(--secondary-color) tracking-[4px] font-light text-xl">sinthtom</span>
+                        </h3>
+                    </a>
+                    <div class="w-full flex justify-center items-center gap-3 lg:pr-10">
+                        <span class="lg:text-lg text-(--secondary-color)">روانکاوی</span>
+                        <span class="lg:text-lg text-(--secondary-color)">|</span>
+                        <span class="lg:text-lg text-(--secondary-color)">نشان گره</span>
                     </div>
+                    <div class="my-8 w-full h-px bg-(--secondary-color)/20"></div>
+                    <div class="w-full flex flex-col gap-2">
+                        <a href="{{route('home')}}" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('home')) bg-white/10 @endif">
+                            <img src="{{ asset('assets/img/side-writing.webp') }}" class="w-1/3" alt="">
+                            <span class="text-sm lg:text-xl text-(--secondary-color)">نوشتار‌ها</span>
+                        </a>
+                        <a href="{{ route('encyclopaedia') }}" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('encyclopaedia')) bg-white/10 @endif">
+                            <img src="{{ asset('assets/img/side-encyclopaedia.webp') }}" class="w-1/3" alt="">
+                            <span class="text-sm lg:text-xl text-(--secondary-color)">دانشنامه</span>
+                        </a>
+                        <a href="{{route('clinic')}}" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('clinic')) bg-white/10 @endif">
+                            <img src="{{ asset('assets/img/side-clinic.webp') }}" class="w-1/3" alt="">
+                            <span class="text-sm lg:text-xl text-(--secondary-color)">کلینیک</span>
+                        </a>
+                        <a href="{{route('message.insert')}}" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('message.insert')) bg-white/10 @endif">
+                            <img src="{{ asset('assets/img/side-clinic.webp') }}" class="w-1/3" alt="">
+                            <span class="text-sm lg:text-xl text-(--secondary-color)">داشبورد</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
                 
-
+    <script src="{{ asset('assets/js/home.js') }}"></script>
         <script>
         const profileButton = document.getElementById('profileButton');
         const dropdownMenu = document.getElementById('dropdownMenu');
@@ -183,18 +186,4 @@
 
 
 
-        function mobilemenu(door){
-            if(door=='clos'){
-                menu.classList.add('invisible')
-                menu.classList.add('opacity-0')
-                bar.classList.remove('translate-x-0')
-                bar.classList.add('-translate-x-full')
-            }
-            if(door=="open"){
-                menu.classList.remove('invisible')
-                menu.classList.remove('opacity-0')
-                bar.classList.add('translate-x-0')
-                bar.classList.remove('-translate-x-full')
-            }
-        }
         </script>
