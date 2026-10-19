@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\phone_code;
 use App\Models\User;
+use App\Models\role_user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -30,10 +31,11 @@ class UserController extends Controller
             return redirect()->back()->with('message', 'این شماره تلفن قبلا استفاده شده');
         }
         if (!$user) {
-            User::create([
+            $user_id=User::insertGetId([
                 'phoneNumber' => $phoneNumber,
                 'password' => Hash::make($password)
             ]);
+            role_user::create(['role_id'=>2 , "user_id"=>$user_id]);
             $user = User::where('phoneNumber', $phoneNumber)->first();
             Auth::login($user);
             return to_route('home');
@@ -144,7 +146,7 @@ class UserController extends Controller
         ];
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
         $response = curl_exec($ch);
-        return response()->json(true);
+        return response()->json($response);
     }
 
     public function sendLoginCode(Request $request)
