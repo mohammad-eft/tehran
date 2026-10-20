@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\phone_code;
 use App\Models\User;
 use App\Models\role_user;
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -209,15 +210,12 @@ class UserController extends Controller
         }
     }
 
-    public function LoginUser(Request $request)
-    {
+    public function LoginUser(Request $request){
         $user = User::where('phoneNumber', $request->phoneNumber)->first();
         Auth::login($user);
         return redirect('/');
     }
-
-    public function loginCode(Request $request)
-    {
+    public function loginCode(Request $request){
         $user = phone_code::where('phoneNumber', $request->phoneNumber)->first();
         if ($user) {
             if ($user->code == $request->code) {
@@ -226,5 +224,36 @@ class UserController extends Controller
             return response()->json(false);
         }
         return response()->json(false);
+    }
+    public function index(){
+        $user=User::all();
+        return view('user.userList' , ['user'=>$user]);
+    }
+    public function edit(user $user){
+        return view('user.edit' , ['user' => $user]);
+    }
+    public function delete(user $user){
+        $user->delete();
+        return to_route('User.list');
+    }
+    public function update(Request $request){
+        $user = User::find($request->id);
+
+        $user->name = $request->name;
+        $user->family = $request->family;
+        if (isset($request->phoneNumber)) {
+            $user->phoneNumber = $request->phoneNumber;
+        }
+
+        if ($request->password) {
+            $password = Hash::make($request->password);
+            $user->password = $password;
+        }
+        $user->save();
+        return to_route('User.list', [Auth::user()]);
+    }
+    public function show(User $user){
+        $message=Message::where('user_id' , $user->id)->get();
+        return view('message' , ['message'=>$message , 'user'=>$user]);
     }
 }

@@ -13,11 +13,20 @@ class MessageController extends Controller{
         return view('message' , ['message'=>$message]);
     }
     public function store(Request $request){
+        $role=Auth::user()->load('role');
+        $role_id=false;
+        if($role->role[0]->id==1){
+            $role_id=true;
+        }
         Message::create([
             "user_id"=>$request->id,
             "message"=>$request->message,
-            "isAdmin"=>0,
+            "isAdmin"=>$role_id?1:0,
         ]);
-        return to_route('message.insert');
+        if($role_id==true){
+            return redirect()->back();
+        }else{
+            return to_route('message.insert');
+        }
     }
 }

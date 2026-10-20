@@ -1,7 +1,7 @@
 @extends('newDashbord')
 @section('title', 'خانه')
 @section('content')
-    <div class="2xl:container mx-auto w-full flex flex-row">
+    <div class="2xl:container mx-auto w-full h-full flex flex-row">
         <div class="w-full h-full relative pb-20">
             <img src="{{ asset('assets/img/main-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
             <div class="relative mt-10">
