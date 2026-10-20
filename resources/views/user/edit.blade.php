@@ -11,10 +11,10 @@
             <div class="pt-3 mt-4 lg:mt-8">
 
                 <form action="{{ route('User.update') }}" method="post"
-                    class="shadow__profaill__list_products rounded-lg pb-4 bg-white" enctype="multipart/form-data">
+                    class="shadow__profaill__list_products rounded-lg pb-4 " enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="id" value="{{ $user->id }}">
-                    <div class="border-b border-gray-300">
+                    <div class="border-b border-white">
                         <h2 class="text-xl mr-5 text-center lg:text-right py-4">جزییات پروفایل</h2>
                     </div>
                     <div class="p-5 px-6">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="w-full h-10  flex justify-end pl-6 gap-2">
                         <button class="px-4 py-2 bg-[#F1F1F4] rounded-[7px] cursor-pointer" type="reset">لغو</button>
-                        <button class="px-4 py-2 bg-green-500 rounded-[7px] text-white cursor-pointer" type="submit">ذخیره
+                        <button class="px-4 py-2 bg-(--primary-color) rounded-[7px] text-white cursor-pointer" type="submit">ذخیره
                             تغییرات</button>
                     </div>
                 </form>
