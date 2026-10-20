@@ -43,17 +43,16 @@ Route::group([
     "controller" => UserController::class,
     "as" => "User.",
 ], function () {
-    // SignUp
     Route::post("/createSignUp", "createSignup")->name("createSignup");
-
-    // login
     Route::post("/LoginUser", "LoginUser")->name("LoginUser");
-
-    // logOut
     Route::get("/logOut", "logOut")->name("logOut");
-
     Route::post('/check', 'check')->name('check');
     Route::post('/checkFromMenu', 'checkFromMenu')->name('checkFromMenu');
+    Route::get('/userList' , 'index')->name('list');
+    Route::get('/show/{user}' , 'show')->name('show');
+    Route::get('/edit/{user}' , 'edit')->name('edit');
+    Route::get('/delete/{user}' , 'delete')->name('delete');
+    Route::post('update' , 'update')->name('update');
 });
 Route::group([
     "prefix"=>"message",

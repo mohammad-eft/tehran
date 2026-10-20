@@ -1,11 +1,12 @@
 @extends('newDashbord')
-@section('title', 'ورود')
+@section('title', 'ثبت نام')
 @section('content')
-<div class="w-full h-dvh flex justify-center items-center">
+<div class="w-full lg:h-full h-dvh flex justify-center">
     <img class="absolute -z-1 top-0 w-full h-full" src="{{ asset('assets/img/main-bg.webp') }}" alt="">
-    <form action="{{ route('User.createSignup') }}" method="POST" id="signupForm"class="lg:w-4/10 sm:w-6/12 w-9/10  mx-auto flex flex-col gap-3 p-5 items-center rounded-2xl">
+    <form action="{{ route('User.createSignup') }}" method="POST" id="signupForm"class="lg:w-4/10 sm:w-6/12 w-9/10  mx-auto flex flex-col gap-3 p-5 items-center rounded-2xl mt-20">
         @csrf
-        <img src="{{ asset('assets/img/logo-light.webp') }}" class="w-20 lg:w-30" alt="">        @if(session('message'))
+        <img src="{{ asset('assets/img/logo-light.webp') }}" class="w-20 lg:w-30" alt="">        
+        @if(session('message'))
             <script>
                 link = "{{ url('/') }}/";
                 alert(@json(session('message')));
