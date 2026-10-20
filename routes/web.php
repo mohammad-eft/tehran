@@ -41,10 +41,11 @@ Route::group([
 Route::group([
     "prefix" => "User",
     "controller" => UserController::class,
+    'middleware'=>[AuthMiddleware::class],
     "as" => "User.",
 ], function () {
-    Route::post("/createSignUp", "createSignup")->name("createSignup");
-    Route::post("/LoginUser", "LoginUser")->name("LoginUser");
+    Route::post("/createSignUp", "createSignup")->name("createSignup")->withoutMiddleware([AuthMiddleware::class]);
+    Route::post("/LoginUser", "LoginUser")->name("LoginUser")->withoutMiddleware([AuthMiddleware::class]);
     Route::get("/logOut", "logOut")->name("logOut");
     Route::post('/check', 'check')->name('check');
     Route::post('/checkFromMenu', 'checkFromMenu')->name('checkFromMenu');
@@ -57,6 +58,7 @@ Route::group([
 Route::group([
     "prefix"=>"message",
     "controller"=>MessageController::class,
+    'middleware'=>[AuthMiddleware::class],
     "as"=>"message."
 ] , function(){
     Route::get('insert' , 'insert')->name('insert');

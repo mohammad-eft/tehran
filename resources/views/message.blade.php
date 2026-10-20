@@ -5,13 +5,24 @@
         <img class="w-full lg:h-full h-dvh object-cover absolute -z-1" src="{{ asset('assets/img/main-bg.webp') }}" alt="">
         <div class="w-full lg:h-full h-dvh flex flex-col gap-10 overflow-hidden overflow-y-auto pt-20 pb-35">
             @foreach($message as $mess)
-            <div class="w-full flex @if($mess->isAdmin==1) justify-start @else justify-end @endif px-5">
+            <div class="w-full flex gap-2 @if($mess->isAdmin==1) justify-start @else justify-end @endif px-5">
+                <div class="size-15 bg-(--primary-color) rounded-full @if($mess->isAdmin==1) flex @else hidden @endif items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="size-6 fill-[#F4E1D1]">
+                        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                    </svg>
+                </div>
                 <div class="w-130 border-2 border-(--primary-color) px-3 py-4 rounded-3xl flex flex-col gap-2  @if($mess->isAdmin==1) bg-[#F4E1D1] @else bg-[#F9EFE4] @endif shadow-xl">
                     <div class="w-full flex flex-col justify-end px-7">
                         <span>@if($mess->isAdmin==1) {{Auth::user()->name}} {{Auth::user()->family}} @else {{$user->name}} @if($user->name) {{$user->name}}{{$user->family}} @else کاربرعادی @endif @endif</span>
-                        <p class="w-full  text-end">{{$mess->message}}</p>
+                        <p class="w-full text-end">{{$mess->message}}</p>
                     </div>
                 </div>
+                <div class="size-15 bg-[#F4E1D1] rounded-full @if($mess->isAdmin==1) hidden @else flex @endif items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="size-6 fill-(--primary-color)">
+                        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                    </svg>
+                </div>
+
             </div>
             @endforeach
         </div>
