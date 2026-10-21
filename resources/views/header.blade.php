@@ -55,24 +55,6 @@
                     <!-- </div> -->
                 @endif
             <div class="w-full flex justify-end items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 fill-(--primary-color) lg:hidden cursor-pointer" id="hamburgerMenu" viewBox="0 0 448 512" onclick="mobilemenu('open')">
-                    <path d="M0 88C0 74.7 10.7 64 24 64H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 112 0 101.3 0 88zM0 248c0-13.3 10.7-24 24-24H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zM448 408c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24H424c13.3 0 24 10.7 24 24z"/>
-                </svg>
-                <div class="lg:flex w-full justify-end gap-5 items-center hidden">
-                    <div class="size-10 rounded-full bg-(--primary-color) flex justify-center items-center">
-                        <a href="#" class="text-(--secondary-color)">س</a>
-                    </div>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 fill-(--primary-color)" viewBox="0 0 448 512">
-                            <path d="M208 16c0-8.8 7.2-16 16-16s16 7.2 16 16V32.8c80.9 8 144 76.2 144 159.2v29.1c0 43.7 17.4 85.6 48.3 116.6l2.8 2.8c8.3 8.3 13 19.6 13 31.3c0 24.5-19.8 44.3-44.3 44.3H44.3C19.8 416 0 396.2 0 371.7c0-11.7 4.7-23 13-31.3l2.8-2.8C46.6 306.7 64 264.8 64 221.1V192c0-83 63.1-151.2 144-159.2V16zm16 48C153.3 64 96 121.3 96 192v29.1c0 52.2-20.7 102.3-57.7 139.2L35.6 363c-2.3 2.3-3.6 5.4-3.6 8.7c0 6.8 5.5 12.3 12.3 12.3H403.7c6.8 0 12.3-5.5 12.3-12.3c0-3.3-1.3-6.4-3.6-8.7l-2.8-2.8c-36.9-36.9-57.7-87-57.7-139.2V192c0-70.7-57.3-128-128-128zM193.8 458.7c4.4 12.4 16.3 21.3 30.2 21.3s25.8-8.9 30.2-21.3c2.9-8.3 12.1-12.7 20.4-9.8s12.7 12.1 9.8 20.4C275.6 494.2 251.9 512 224 512s-51.6-17.8-60.4-42.7c-2.9-8.3 1.4-17.5 9.8-20.4s17.5 1.4 20.4 9.8z"/>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="w-7 h-7 text-(--primary-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
-                        </svg>
-                    </a>
-                </div>
             </div>
         </div>  
         
@@ -113,7 +95,7 @@
                         </a>
                         <a href="{{route('message.insert')}}" class="w-full flex flex-row items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('message.insert')) bg-white/10 @endif">
                             <img src="{{ asset('assets/img/side-clinic.webp') }}" class="w-1/3" alt="">
-                            <span class="text-sm lg:text-xl text-(--secondary-color)">داشبورد</span>
+                            <span class="text-sm lg:text-xl text-(--secondary-color)">پنل کار بری</span>
                         </a>
                         @can('Can' , ['admin'])
                         <a href="{{route('User.list')}}" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('User.list')) bg-white/10 @endif">

@@ -256,4 +256,11 @@ class UserController extends Controller
         $message=Message::where('user_id' , $user->id)->get();
         return view('message' , ['message'=>$message , 'user'=>$user]);
     }
+    public function removeActivationCode(Request $request){
+        $row = phone_code::where('phoneNumber', $request->phoneNumber)->first();
+        if ($row) {
+            $row->delete();
+        }
+        return response()->json($row);
+    }
 }

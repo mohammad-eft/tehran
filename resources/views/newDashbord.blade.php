@@ -42,7 +42,7 @@
                             <img src="{{ asset('assets/img/side-clinic.webp') }}" class="hidden lg:block w-1/3" alt="">
                         </a>
                         <a href="{{route('message.insert')}}" class="w-full flex flex-row justify-center lg:justify-end items-center px-5 py-2.5 gap-5 rounded-xl transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-xs @if(Route::is('message.insert')) bg-white/10 @endif">
-                            <span class="text-sm lg:text-xl text-(--secondary-color)">داشبورد</span>
+                            <span class="text-sm lg:text-xl text-(--secondary-color)">پنل کاربری</span>
                             <img src="{{ asset('assets/img/side-clinic.webp') }}" class="hidden lg:block w-1/3" alt="">
                         </a>
                         @can('Can' , ['admin'])
