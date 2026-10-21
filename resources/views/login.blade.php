@@ -14,7 +14,7 @@
     
         <div class="w-full flex gap-2 justify-between" id="codeBox">
             <button type="button" onclick="sendCode(this)"
-            class="bg-[#443514] w-3/10 text-center text-white flex items-center rounded-lg justify-center px-2">ارسال کد</button>
+            class="w-4/12 text-xs lg:text-base h-full p-2 md:p-[9px] rounded-[7px] bg-[#443514] text-white cursor-pointer" id="countDown">ارسال کد</button>
             <input class="w-6/10 p-2 text-end border-b-1 border-brown-400" name="code" type="text" placeholder="کد" id="code">
         </div>
     
@@ -109,6 +109,7 @@
         }
 
         function sendCode(el) {
+            counter()
             if (phoneNumber.value == "") {
                 alert("شماره موبایل الزامیست")
             } else {
@@ -124,6 +125,64 @@
                     }
                 });
             }
+        }
+
+        function counter() {
+            let phoneNumber = document.getElementById('phoneNumber')
+            countDown.classList.add('cursor-no-drop')
+            countDown.classList.remove('cursor-pointer')
+            countDown.classList.remove('bg-[#443514]')
+            countDown.classList.add('bg-[#443514]/50')
+            countDown.setAttribute('disabled', true)
+            countDown.setAttribute('dir', 'ltr')
+            let count = 120
+            let result = setInterval(() => {
+                let minute = Math.floor(count / 60)
+                let seconds = count % 60
+                count -= 1
+                if (count < 0) {
+
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                        }
+                    })
+                    $.ajax({
+                        url: "{{ route('removeActivationCode') }}",
+                        type: "POST",
+                        dataType: "json",
+                        data: {
+                            'phoneNumber': phoneNumber.value
+                        },
+                        success: function(data) {
+                            console.log(data)
+                            countDown.classList.remove('cursor-no-drop')
+                            countDown.classList.add('bg-(--primary-color)')
+                            countDown.classList.remove('bg-(--primary-color)/50')
+                            countDown.classList.add('cursor-pointer')
+                            countDown.classList.add('hover:bg-(--hover-primary-color)')
+                            countDown.classList.remove('hover:bg-(--hover-primary-color)/50')
+                            countDown.removeAttribute('disabled')
+                            countDown.removeAttribute('dir')
+                            countDown.innerText = "ارسال مجدد"
+                        },
+                        error: function() {
+                            showMessage('open')
+                            element.innerHTML = `
+                                <span>❌</span>
+                                <span class="text-shadw-lg">خطا در دریافت اطلاعات!</span>
+                            `
+                            message.children[0].appendChild(element)
+                            setTimeout(() => {
+                                showMessage('close')
+                            }, 2500)
+                        }
+                    })
+                    clearInterval(result)
+                }
+                countDown.innerText = minute.toString().padStart(2, "0") + " : " + seconds.toString().padStart(2,
+                    "0");
+            }, 1000)
         }
 
 
