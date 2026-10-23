@@ -5,7 +5,7 @@
         <div class="w-full h-full relative pb-20">
             <img src="{{ asset('assets/img/main-bg.webp') }}" class="absolute top-0 right-0 w-full h-full object-cover" alt="">
             <div class="relative mt-10 flex flex-col gap-10">
-                <div class="w-full flex flex-col justify-center items-center mt-3 gap-3">
+                <div class="w-full flex flex-col justify-center items-center mt-2 gap-3">
                     <img src="{{ asset('assets/img/main-element.webp') }}" class="max-w-20 lg:max-w-40" alt="">
                     <div class="flex jstify-center items-center gap-3 lg:gap-6 relative">
                         <span class="text-xl lg:text-3xl text-(--primary-color)">روانکاوی</span>
@@ -14,7 +14,7 @@
                         <span class="absolute block w-10 h-0.5 bg-(--primary-color) right-1/2 translate-x-7/12 -bottom-5"></span>
                     </div>
                 </div>
-                <div class="w-full px-8 grid grid-cols-1 lg:grid-cols-3 gap-5 mt-16">
+                <div class="w-full px-8 grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10">
                     <div class="w-full p-4 lg:p-8 border-1 border-(--primary-color)/50 flex flex-row items-center gap-4 lg:block rounded-xl">
                         <div>
                             <div class="relative mb-3 pb-3 lg:pb-5 lg:mb-5">
